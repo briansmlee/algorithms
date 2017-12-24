@@ -1,2 +1,2 @@
 # Algorithms
-Algorithms Coursera
+practicing algorithms
