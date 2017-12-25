@@ -18,14 +18,12 @@ def urlify(A, n):
             B[j] = c
             j += 1
     return B
-
 """
 
 # hint: modify string from backwards
 
 def urlify(arr, n):
     A = list(arr)
-    print(A)
     # i,j point to end of old, new strings
     end = j = len(A) - 1
     while A[end] == ' ':
@@ -45,5 +43,14 @@ A = "Mr John Smith    "
 n = 13
 B = urlify(A, n)
 print(B)
+
+"""
+NOTE:
+*** 1. TRAVERSE FROM BACK, IF OVERWRITE IS OK.
+2. I assumed that the terminal spaces fit the string exactly.
+if not, count # of spaces to count exact # of spaces needed.
+*** 3. string is immutable in python.
+    so, more sense to start with list of chars, for this in-place algo.
+"""
             
             

@@ -24,11 +24,17 @@
 # 
 
 # with new assumptions
-# O(n)
+# O(n) by for loop
 def is_unique(A):
+    # NOTE
+    if len(A) > 128:
+        return False
+
     count = [False] * 128
     for c in A:
-        if count[ord(c)] == True:
+        # NOTE
+        # if count[ord(c)] == True:
+        if count [ord(c)]:
             return False
         else:
             count[ord(c)] = True
