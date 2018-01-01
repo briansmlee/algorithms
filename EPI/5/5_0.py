@@ -26,6 +26,8 @@ if A[L] is even, L++, cont
 if A[R] is odd, R--, cont
 swap
 L++ and R--
+
+O(N)
 """
 
 def reorder(A):
