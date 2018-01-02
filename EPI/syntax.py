@@ -1,5 +1,7 @@
 """
+--------------------
 5. Array
+--------------------
 
 [3, 5, 7]
 [1] + [0] * 10
@@ -43,7 +45,78 @@ list comprehension
 + multiple lvls of looping
 
 
+--------------------
+6. Strings
+--------------------
+s[3]
+len(s)
+s + t
+s[2:4]
+s in t
 
+s.strip()
+s.startswith(prefix)
+s.endswith(suffix)
+'Hello,World'.split(',')    # returns an array
+3 * '01'
+','.join(['Hello', 'World'])    # can be any collection (ex. tuple)
+s.tolower()
+'Name {name}, Rank {rank}'.format(name='Brian', rank=3)
 
+immutable!!!
+s = s[1:]
+s += '123' create new array
+
+s.isalnum()
+
+--------------------
+8. Stack & Queue
+--------------------
+Stack:
+
+s.append(e)
+s[-1]   # IndexError if empty
+s.pop() # "
+len(s) == 0
+
+Queue:
+
+from collections import deque
+q = deque('abc' or [0,1,2]) # both three items, any iterable
+q.append(e)
+q[0]
+q.popleft()
+
+--------------------
+10. Heaps
+--------------------
+min-heap = root is min = children are larger
+
+Time
+-----
+heapify:    n
+insert:     log n
+max/min:    1
+delete max: log n
+search for arbitrary key:   n
+
+Syntax
+-----
+import heapq
+heapq.heapify(L)        # turns L into a list, in-place
+heapq.nlargest(k, L)    # k largest elems in L
+or nsmallest
+heapq.heappush(h, e)
+heapq.heappop(h)        # smallest elem
+heapq.heappushpop(h, a) # pushes a on heap, then pops smallest elem
+e = h[0]                # returns smallest elem w/o pop
+
+Tips
+-----
+- if need max-heap, insert negatives
+- augment data to tuple (key, data)
+- if need to keep index of lists, use iterator and enumerate()
+lists_iters = [iter(x) for x in sorted_lists]
+for idx, val in enumerate(lists):
 
 
