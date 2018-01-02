@@ -1,57 +1,42 @@
 """
-10-2 Sort an inc-dec array
+10-4 k closest stars
 
 0. T
-k-inc-dec = inc upto certain index after which they dec, 
-repeat k times
-sort k-inc-dec arr
+earth is at 0, 0, 0
+star = pt
+dist = light yrs
+10^12 stars
 
-1. C
-- repeats?
+find k stars closest to earth
 
-2. EX
-4-inc-dec
+1. EX
+2. C
+- assume dist() is given
 
 3. BF
-sort whole thing
-O(n lg n)
+sort
 
 4. Qs
-- given m smallest, how to find m + 1th smallest?
-if rev dec seq, have k inc seqs
-can only consider k current smallest
-- heap
-- sz?
-k
-- min/max?
-min
-- iterator?
-- keep which list cur min is from?
-tuple, (elem, idx)
-
-- how to rev each dec seq?
-is_inc = True
-arrs = []
-start, end
-while start < len(A)
-if is_inc
-    while end + 1 < len(A) and A[end] < A[end+1]
-        end += 1
-    arrs.append(A[start:end])
-    is_inc = F
-    start = end = end + 1
-else
-    opposite
+- max heap?
+k closest. cmpr longest among those.
+insert -dist
+- if max > new, pop max, insert new.
+- keep dist info?
+have to, since heap.
+(dist, star)
+- 
 
 5. Edge
-- inflection pts
-dec seq takes inf pt
+- start?
+start with first k
+
+- if same dist?
+not replace.
 
 6. Out
-do above,
-do 10-1
+same
 
 7. TS
-T: O(n log k)
-S: O(k)
+same
 """
+
